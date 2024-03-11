@@ -9,11 +9,23 @@ jobs:
         run: |
           pwd
           ls
-      - name : Sample javascript action
-        id: hello
+          
+
+      - name: List Files
+        run: |
+          pwd
+          ls
+
+      - name: Checkout
         uses: actions/checkout@v3
-        with:
-          who-to-greet: devopshint
+
+      - name: List Files after Checkout
+        run: |
+          pwd
+          ls -a
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKPLACE
 
       - name: Get the out put time
         run: echo "${{steps.hello.outputs.time}}"
