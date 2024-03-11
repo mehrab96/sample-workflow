@@ -5,11 +5,11 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List files
+      - name: List Files
         run: |
           pwd
           ls
-      - name : sample javascript action
+      - name : Sample javascript action
         id: hello
         uses: actions/hello-world-javascript-actions@v1
         with:
